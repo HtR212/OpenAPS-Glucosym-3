@@ -1,0 +1,39 @@
+{
+    "index": 19,
+    "Vg": 253.0,
+    "bioavail": 6.0,
+    "BGTarget": 95,
+    "dt": 5.0,
+    "deltat_v": 20,
+    "time": 100000,
+    "events": {
+        "carb": [
+            {
+                "length": 0,
+                "amt": 0.0,
+                "start": 0
+            },
+            {
+                "length": 0,
+                "amt": 0.0,
+                "start": 0
+            }
+        ],
+        "basal": [
+            {
+                "length": 30,
+                "amt": 0.1,
+                "start": 95
+            }
+        ],
+        "bolus": [
+            {
+                "amt": 0.0,
+                "start": 0
+            }
+        ]
+    },
+    "IRss": 1.3,
+    "dia": 4,
+    "sens": 45
+}

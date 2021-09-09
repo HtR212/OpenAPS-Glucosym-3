@@ -23,7 +23,7 @@ mv ./dependencies/pip ./${venv_name}/lib/python${python_version}/site-packages
 mv ./dependencies/pip-* ./${venv_name}/lib/python${python_version}/site-packages
 mv ./dependencies/setuptools ./${venv_name}/lib/python${python_version}/site-packages
 mv ./dependencies/setuptools-* ./${venv_name}/lib/python${python_version}/site-packages
-rm ./dependencies
+rm -r ./dependencies
 
 pip install numpy==1.18.5 watchdog==0.10.6 nodeenv==1.6.0 openaps==0.1.5 openaps-contrib==0.0.15 matplotlib==3.0.3
 

@@ -15,8 +15,16 @@ if [[ "${answer}" == n ]] ; then
   done
 fi
 
-pip install setuptools==44.1.1
-pip install numpy==1.16.6 watchdog==0.10.7 nodeenv==1.6.0 openaps==0.1.5 openaps-contrib==0.0.15 matplotlib==2.2.5
+rm -r ./${venv_name}/lib/python${python_version}/site-packages/pip
+rm -r ./${venv_name}/lib/python${python_version}/site-packages/pip-*
+rm -r ./${venv_name}/lib/python${python_version}/site-packages/setuptools
+rm -r ./${venv_name}/lib/python${python_version}/site-packages/setuptools-*
+mv ./pip ./${venv_name}/lib/python${python_version}/site-packages
+mv ./pip-* ./${venv_name}/lib/python${python_version}/site-packages
+mv ./setuptools ./${venv_name}/lib/python${python_version}/site-packages
+mv ./setuptools-* ./${venv_name}/lib/python${python_version}/site-packages
+
+pip install numpy==1.18.5 watchdog==0.10.6 nodeenv==1.6.0 openaps==0.1.5 openaps-contrib==0.0.15 matplotlib==3.0.3
 
 apt-get download python-dev=2.7.12-1~16.04 python-software-properties=0.96.20.10
 
@@ -38,7 +46,6 @@ cp -f ./substitution\ files/oref0/determine-basal.js ./${venv_name}/lib/node_mod
 cp -f ./substitution\ files/oref0/oref0-determine-basal.js ./${venv_name}/lib/node_modules/oref0/bin/
 
 # For python 3 only
-cp -f ./substitution\ files/openaps ./${venv_name}/bin/
 cp -f ./substitution\ files/vendors/medtronic.py ./${venv_name}/lib/python${python_version}/site-packages/openaps/vendors/
 cp -f ./substitution\ files/decocare/stick.py ./${venv_name}/lib/python${python_version}/site-packages/decocare/
 cp -f ./substitution\ files/decocare/session.py ./${venv_name}/lib/python${python_version}/site-packages/decocare/
@@ -76,7 +83,14 @@ cp -f ./substitution\ files/vendors/plugins/__init__.py ./${venv_name}/lib/pytho
 cp -f ./substitution\ files/uses/__init__.py ./${venv_name}/lib/python${python_version}/site-packages/openaps/uses/
 cp -f ./substitution\ files/uses/registry.py ./${venv_name}/lib/python${python_version}/site-packages/openaps/uses/
 cp -f ./substitution\ files/reports/__init__.py ./${venv_name}/lib/python${python_version}/site-packages/openaps/reports/
-cp -f ./substitution\ files/openaps-report ./${venv_name}/bin/
+cp -f ./substitution\ files/reports/add.py ./${venv_name}/lib/python${python_version}/site-packages/openaps/reports/
+cp -f ./substitution\ files/reports/remove.py ./${venv_name}/lib/python${python_version}/site-packages/openaps/reports/
+cp -f ./substitution\ files/reports/invoke.py ./${venv_name}/lib/python${python_version}/site-packages/openaps/reports/
+cp -f ./substitution\ files/reports/show.py ./${venv_name}/lib/python${python_version}/site-packages/openaps/reports/
+cp -f ./substitution\ files/alias/__init__.py ./${venv_name}/lib/python${python_version}/site-packages/openaps/alias/
+cp -f ./substitution\ files/reports/reporters/__init__.py ./${venv_name}/lib/python${python_version}/site-packages/openaps/reports/reporters/
+#cp -f ./substitution\ files/openaps-report ./${venv_name}/bin/
+#cp -f ./substitution\ files/openaps ./${venv_name}/bin/
 # End
 
 cd ./openaps${python_version}

@@ -68,7 +68,7 @@ Before the installation process, the following things need to be installed:
 2. **Virtual environment**   
   * A virtual environment need to be set up inside ./OpenAPS-Glucosym/:  
   ```sh
-  $ cd ./OpenAPS-Glucosym  
+  $ cd ./OpenAPS-Glucosym-3  
   $ virtualenv --no-site-packages --python=/usr/bin/python3 ./venv/ #set up a virtual environment that uses python3.5  
   ```
   * To enter the virtual environment, use the following command:
@@ -98,7 +98,7 @@ Before the installation process, the following things need to be installed:
 
 First, open a terminal window and run the following commands:  
 ```sh
-(venv)$ cd ./OpenAPS-Glucosym
+(venv)$ cd ./OpenAPS-Glucosym-3
 (venv)$ source ./venv/bin/activate
 (venv)$ cd ./glucosym
 (venv)$ npm start
@@ -109,7 +109,7 @@ Then, open a browser and navigate to http://localhost:3000.
 
 Open another terminal window and initialize OpenAPS:
 ```sh
-(venv)$ cd ./OpenAPS-Glucosym  
+(venv)$ cd ./OpenAPS-Glucosym-3  
 (venv)$ source ./venv/bin/activate
 (venv)$ cd ./openaps3.5   
 (venv)$ python initialize.py [initial bg]  

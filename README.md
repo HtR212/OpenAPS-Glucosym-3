@@ -66,7 +66,7 @@ Before the installation process, the following things need to be installed:
   ```
 
 2. **Virtual environment**   
-  * A virtual environment need to be set up inside ./OpenAPS-Glucosym/:  
+  * A virtual environment need to be set up inside ./OpenAPS-Glucosym-3/:  
   ```sh
   $ cd ./OpenAPS-Glucosym-3  
   $ virtualenv --no-site-packages --python=/usr/bin/python3 ./venv/ #set up a virtual environment that uses python3.5  

@@ -53,8 +53,8 @@ This section should list any major frameworks that you built your project using.
 
 ### Prerequisites
 Before the installation process, the following things need to be installed:
-* python2.7   
-* pip (``` $ wget https://bootstrap.pypa.io/pip/2.7/get-pip.py ```)   
+* python3.5   
+* pip (``` $ wget https://bootstrap.pypa.io/pip/3.5/get-pip.py ```)   
 * virtualenv@15.0.1 (``` $ pip install virtualenv==15.0.1 ```)  
 * git   
 
@@ -62,14 +62,14 @@ Before the installation process, the following things need to be installed:
 
 1. **Clone the repo**
   ```sh
-  $ git clone https://github.com/HtR212/OpenAPS-Glucosym.git
+  $ git clone https://github.com/HtR212/OpenAPS-Glucosym-3.git
   ```
 
 2. **Virtual environment**   
   * A virtual environment need to be set up inside ./OpenAPS-Glucosym/:  
   ```sh
   $ cd ./OpenAPS-Glucosym  
-  $ virtualenv --no-site-packages --python=/usr/bin/python2 ./venv/ #set up a virtual environment that uses python2  
+  $ virtualenv --no-site-packages --python=/usr/bin/python3 ./venv/ #set up a virtual environment that uses python3.5  
   ```
   * To enter the virtual environment, use the following command:
   ```sh
@@ -83,8 +83,8 @@ Before the installation process, the following things need to be installed:
   
 3. **Run the auto-install script**  
   ```sh
-  (venv)$ chmod u+x ./closedloop2.7-setup.sh
-  (venv)$ ./closedloop2.7-setup.sh
+  (venv)$ chmod u+x ./closedloop3.5-setup.sh
+  (venv)$ ./closedloop3.5-setup.sh
   ```
 * After finishing the above steps, please close the current terminal window. 
    
@@ -108,7 +108,7 @@ Open another terminal window and initialize OpenAPS:
 ```sh
 (venv)$ cd ./OpenAPS-Glucosym  
 (venv)$ source ./venv/bin/activate
-(venv)$ cd ./openaps2.7   
+(venv)$ cd ./openaps3.5   
 (venv)$ python initialize.py [initial bg]  
 ```
 Next, change the initial bg of the selected patient on the glucosym server and run the closed loop simulation:

@@ -19,10 +19,11 @@ rm -r ./${venv_name}/lib/python${python_version}/site-packages/pip
 rm -r ./${venv_name}/lib/python${python_version}/site-packages/pip-*
 rm -r ./${venv_name}/lib/python${python_version}/site-packages/setuptools
 rm -r ./${venv_name}/lib/python${python_version}/site-packages/setuptools-*
-mv ./pip ./${venv_name}/lib/python${python_version}/site-packages
-mv ./pip-* ./${venv_name}/lib/python${python_version}/site-packages
-mv ./setuptools ./${venv_name}/lib/python${python_version}/site-packages
-mv ./setuptools-* ./${venv_name}/lib/python${python_version}/site-packages
+mv ./dependencies/pip ./${venv_name}/lib/python${python_version}/site-packages
+mv ./dependencies/pip-* ./${venv_name}/lib/python${python_version}/site-packages
+mv ./dependencies/setuptools ./${venv_name}/lib/python${python_version}/site-packages
+mv ./dependencies/setuptools-* ./${venv_name}/lib/python${python_version}/site-packages
+rm ./dependencies
 
 pip install numpy==1.18.5 watchdog==0.10.6 nodeenv==1.6.0 openaps==0.1.5 openaps-contrib==0.0.15 matplotlib==3.0.3
 

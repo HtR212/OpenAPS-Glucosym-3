@@ -88,7 +88,7 @@ Before the installation process, the following things need to be installed:
   ```
   
 4. **Debug files under /bin**   
-  Currently there is not another better method to solve the bugs with files under /bin. The first file to debug is /bin/openaps. In this file, change two print commands to Python3 syntax by adding a pair of parenthesis around the message to be printed and then change "except (OSError), e" to "except (OSError) as e". The second file to debug is /bin/openaps-report. In this file, delete "choices = choices.sort()" and change "choices = available.keys()" to "choices = sorted(available.keys())".
+  Currently, there is not a better method to solve the bugs in files under /bin. So, these bugs need to be fixed manually. The first file to debug is /bin/openaps. In this file, change two print commands to Python3 syntax by adding a pair of parenthesis around the message to be printed and then change "except (OSError), e" to "except (OSError) as e". The second file to debug is /bin/openaps-report. In this file, delete "choices = choices.sort()" and change "choices = available.keys()" to "choices = sorted(available.keys())".
 * After finishing the above steps, please close the current terminal window. 
    
 <!-- SIMULATION WORKFLOW -->
